@@ -31,16 +31,16 @@ sub json_ld_data {
   foreach (@{$self->json_ld_fields}) {
     if (my $reftype = ref $_) {
       if ($reftype eq 'HASH') {
-	      while (my ($key, $val) = each %{$_}) {
+        while (my ($key, $val) = each %{$_}) {
           if (ref $val eq 'CODE') {
             $data->{$key} = $val->($self);
-	        } else {
+          } else {
             $data->{$key} = $self->$val;
           }
-	      }
+        }
       } else {
         carp "Weird JSON-LD reference: $reftype";
-	      next;
+        next;
       }
     } else {
       $data->{$_} = $self->$_;
