@@ -19,4 +19,7 @@ sub json_ld_fields { [ qw[ foo bar ], {
   baz => sub { $_[0]->bar . ' ' . $_[0]->foo },
 } ] }
 
+no Moose;
+__PACKAGE__->meta->make_immutable;
+
 1;
