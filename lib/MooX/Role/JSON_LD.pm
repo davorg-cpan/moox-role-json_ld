@@ -1,5 +1,7 @@
 package MooX::Role::JSON_LD;
 
+use feature 'say';
+
 use Moo::Role;
 use JSON;
 use Carp;
@@ -10,11 +12,12 @@ requires qw[json_ld_type json_ld_fields];
 has json_ld_encoder => (
   isa => InstanceOf['JSON'],
   is  => 'ro',
-  lazy_build => 1,
+  lazy => 1,
+  builder => '_build_json_ld_encoder',
 );
 
 sub _build_json_ld_encoder {
-  return JSON->new->utf8->space_after->indent->pretty;
+  return JSON->new->canonical->utf8->space_after->indent->pretty;
 }
 
 sub json_ld_data {
@@ -28,20 +31,20 @@ sub json_ld_data {
   foreach (@{$self->json_ld_fields}) {
     if (my $reftype = ref $_) {
       if ($reftype eq 'HASH') {
-	while (my ($key, $val) = each %{$_}) {
+	      while (my ($key, $val) = each %{$_}) {
           if (ref $val eq 'CODE') {
             $data->{$key} = $val->($self);
-	  } else {
+	        } else {
             $data->{$key} = $self->$val;
           }
-	}
+	      }
       } else {
         carp "Weird JSON-LD reference: $reftype";
-	next;
+	      next;
       }
     } else {
       $data->{$_} = $self->$_;
-    } 
+    }
   }
 
   return $data;
