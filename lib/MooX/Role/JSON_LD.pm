@@ -142,6 +142,8 @@ use JSON;
 use Carp;
 use Types::Standard 'InstanceOf';
 
+our $VERSION = '0.0.1';
+
 requires qw[json_ld_type json_ld_fields];
 
 has json_ld_encoder => (

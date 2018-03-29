@@ -5,7 +5,12 @@ use FindBin '$Bin';
 use lib "$Bin/lib";
 
 use Test::More;
-use MooseTester;
+
+eval { use MooseTester; };
+
+if ($@) {
+  plan skip_all => 'Moose not installed';
+}
 
 ok(my $obj = MooseTester->new, 'Got an object');
 isa_ok($obj, 'MooseTester');
