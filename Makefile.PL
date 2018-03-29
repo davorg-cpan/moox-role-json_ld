@@ -4,8 +4,9 @@ WriteMakefile(
     NAME              => 'MooX::Role::JSON_LD',
     VERSION_FROM      => 'lib/MooX/Role/JSON_LD.pm',
     PREREQ_PM         => {
-        Moo                  => 0,
-        Types::Standard      => 0,
+        Moo             => 0,
+        Types::Standard => 0,
+	JSON            => 0,
     },
     BUILD_REQUIRES    => {
         Test::More    => 0,
