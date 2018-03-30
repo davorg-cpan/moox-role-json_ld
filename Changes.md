@@ -1,5 +1,17 @@
 # Change Log
 
+## [0.0.4] - 2018-03-30
+
+### Fixed
+
+- Added Changes.md to MANIFEST.
+
+## [0.0.3] - 2018-03-30
+
+### Fixed
+
+- Removed unwanted files from MANIFEST.
+
 ## [0.0.2] - 2018-03-30
 
 ### Fixed
