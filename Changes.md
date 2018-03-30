@@ -1,5 +1,11 @@
 # Change Log
 
+## [0.0.2] - 2018-03-30
+
+### Fixed
+
+- Various packaging fixes.
+
 ## [0.0.1] - 2018-03-30
 
 ### Added

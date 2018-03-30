@@ -3,7 +3,7 @@ use ExtUtils::MakeMaker;
 WriteMakefile(
     NAME              => 'MooX::Role::JSON_LD',
     VERSION_FROM      => 'lib/MooX/Role/JSON_LD.pm',
-    MINIMUM_PERL_VERSION => '5.6.0',
+    MIN_PERL_VERSION  => '5.6.0',
     PREREQ_PM         => {
         Moose           => 0,
         Moo             => 0,
