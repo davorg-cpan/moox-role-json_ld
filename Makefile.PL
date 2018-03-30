@@ -6,7 +6,7 @@ WriteMakefile(
     PREREQ_PM         => {
         Moo             => 0,
         Types::Standard => 0,
-	JSON            => 0,
+        JSON            => 0,
     },
     BUILD_REQUIRES    => {
         Test::More    => 0,
