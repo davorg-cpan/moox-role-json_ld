@@ -142,7 +142,7 @@ use JSON;
 use Carp;
 use Types::Standard 'InstanceOf';
 
-our $VERSION = '0.0.2';
+our $VERSION = '0.0.3';
 
 requires qw[json_ld_type json_ld_fields];
 
