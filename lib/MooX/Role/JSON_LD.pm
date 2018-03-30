@@ -194,3 +194,20 @@ sub json_ld {
 }
 
 1;
+
+=head1 AUTHOR
+
+Dave Cross <dave@perlhacks.com>
+
+=head1 SEE ALSO
+
+perl(1), Moo, Moose, L<https://json-ld.org/>, L<https://schema.org/>
+
+=head1 COPYRIGHT AND LICENSE
+
+Copyright (C) 2018, Magnum Solutions Ltd.  All Rights Reserved.
+
+This script is free software; you can redistribute it and/or modify it
+under the same terms as Perl itself.
+
+=cut
