@@ -73,7 +73,7 @@ you want to use in your JSON-LD, simply add a method called C<json_ld_type>
 which returns the name of your type as a string. This string will be used
 in the C<@type> field of the JSON-LD.
 
-=head3 Defining your fields
+=head2 Defining your fields
 
 You also need to define the fields that are to be included in your JSON-LD.
 To do this, you need to add a method called C<json_ld_fields> which returns
