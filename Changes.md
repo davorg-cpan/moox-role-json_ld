@@ -1,5 +1,11 @@
 # Change Log
 
+## [0.0.6] - 2018-05-26
+
+## Added
+
+- Make context configurable
+
 ## [0.0.5] - 2018-03-30
 
 ### Fixed

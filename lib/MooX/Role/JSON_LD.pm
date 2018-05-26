@@ -131,6 +131,12 @@ That configuration will give us the following output:
     "birthDate" : "1974-01-08",
     "name" : "David Bowie",
 
+=head2 Other contexts
+
+By default, this role uses the URL L<http://schema.org>, but you can change
+this. This role adds an attribute (called C<context>) which can be used to
+change the context.
+
 =cut
 
 package MooX::Role::JSON_LD;
@@ -140,9 +146,9 @@ use 5.6.0;
 use Moo::Role;
 use JSON;
 use Carp;
-use Types::Standard 'InstanceOf';
+use Types::Standard qw[InstanceOf Str];
 
-our $VERSION = '0.0.5';
+our $VERSION = '0.0.6';
 
 requires qw[json_ld_type json_ld_fields];
 
@@ -157,11 +163,21 @@ sub _build_json_ld_encoder {
   return JSON->new->canonical->utf8->space_after->indent->pretty;
 }
 
+has context => (
+  isa => Str,
+  is  => 'ro',
+  builder => '_build_context',
+);
+
+sub _build_context {
+  return 'http://schema.org';
+}
+
 sub json_ld_data {
   my $self = shift;
 
   my $data = {
-    '@context' => 'http://schema.org',
+    '@context' => $self->context,
     '@type'    => $self->json_ld_type,
   };
 
