@@ -1,5 +1,9 @@
 # Change Log
 
+### Added
+
+- Allow context to be a hashref or arrayref
+
 ## [0.0.7]
 
 ### Added

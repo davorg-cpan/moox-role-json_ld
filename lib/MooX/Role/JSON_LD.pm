@@ -146,7 +146,7 @@ use 5.6.0;
 use Moo::Role;
 use JSON;
 use Carp;
-use Types::Standard qw[InstanceOf Str];
+use Types::Standard qw[ArrayRef HashRef InstanceOf Str];
 
 our $VERSION = '0.0.7';
 
@@ -164,7 +164,7 @@ sub _build_json_ld_encoder {
 }
 
 has context => (
-  isa => Str,
+  isa => Str | HashRef | ArrayRef,
   is  => 'ro',
   builder => '_build_context',
 );
