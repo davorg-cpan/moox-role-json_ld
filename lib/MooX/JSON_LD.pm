@@ -148,7 +148,7 @@ sub _process_has {
     if ( $opts{json_ld} || $opts{json_ld_serializer} ) {
 
         my $class = caller(1);
-        $Attributes{$class} //= [];
+        $Attributes{$class} ||= [];
 
         my $label  = delete $opts{json_ld};
         my $method = delete $opts{json_ld_serializer};
