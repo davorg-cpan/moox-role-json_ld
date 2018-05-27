@@ -1,8 +1,14 @@
 # Change Log
 
+## [0.0.7]
+
+### Added
+
+- Added tests for configurable contexts
+
 ## [0.0.6] - 2018-05-26
 
-## Added
+### Added
 
 - Make context configurable
 

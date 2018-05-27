@@ -148,7 +148,7 @@ use JSON;
 use Carp;
 use Types::Standard qw[InstanceOf Str];
 
-our $VERSION = '0.0.6';
+our $VERSION = '0.0.7';
 
 requires qw[json_ld_type json_ld_fields];
 
