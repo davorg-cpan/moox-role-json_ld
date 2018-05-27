@@ -4,6 +4,8 @@
 
 - Allow context to be a hashref or arrayref
 
+- Use JSON::MaybeXS instead of JSON
+
 ## [0.0.7]
 
 ### Added

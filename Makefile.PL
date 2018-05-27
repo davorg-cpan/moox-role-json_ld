@@ -8,7 +8,7 @@ WriteMakefile(
         Moose           => 0,
         Moo             => 0,
         Types::Standard => 0,
-        JSON            => 0,
+        JSON::MaybeXS   => 0,
     },
     BUILD_REQUIRES    => {
         Test::More    => 0,
@@ -29,4 +29,3 @@ WriteMakefile(
 
     },
 );
-
