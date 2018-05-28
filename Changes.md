@@ -1,5 +1,11 @@
 # Change Log
 
+## [Unreleased]
+
+### Fixed
+
+- Added namespace::autoclean
+
 ## [0.0.10] - 2018-05-28
 
 ### Fixed
