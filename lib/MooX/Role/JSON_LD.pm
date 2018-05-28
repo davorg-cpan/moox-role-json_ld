@@ -148,7 +148,7 @@ use Carp;
 use JSON::MaybeXS;
 use Types::Standard qw[ArrayRef HashRef InstanceOf Str];
 
-our $VERSION = '0.0.7';
+our $VERSION = '0.0.10';
 
 requires qw[json_ld_type json_ld_fields];
 
@@ -218,6 +218,9 @@ Dave Cross <dave@perlhacks.com>
 =head1 SEE ALSO
 
 perl(1), Moo, Moose, L<https://json-ld.org/>, L<https://schema.org/>
+
+L<MooX::JSON_LD> is included in this distribution and provides an alternative
+interface to the same functionality.
 
 =head1 COPYRIGHT AND LICENSE
 

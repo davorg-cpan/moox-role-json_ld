@@ -1,14 +1,32 @@
 # Change Log
 
+## [0.0.10] - 2018-05-28
+
+### Fixed
+
+- Added missing test module.
+
+## [0.0.9] - 2018-05-28
+
 ### Added
 
-- Allow context to be a hashref or arrayref
+- Added MooX::JSON_LD to MANIFEST so it actually gets shipped.
 
-- Use JSON::MaybeXS instead of JSON
+## [0.0.8] - 2018-05-27
 
-- Added MooX::JSON_LD helper module
+### Added
 
-## [0.0.7]
+- Allow context to be a hashref or arrayref (thanks robrwo)
+
+- Use JSON::MaybeXS instead of JSON (thanks robrwo)
+
+- Added MooX::JSON_LD helper module (thanks robrwo)
+
+### Fixed
+
+- Typo in documentation (thanks manwar)
+
+## [0.0.7] - 2018-05-26
 
 ### Added
 
