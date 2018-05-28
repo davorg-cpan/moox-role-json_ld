@@ -4,10 +4,14 @@
 
 ### Fixed
 
-- Added namespace::autoclean
-
 - Fix handling of subclasses in MooX::JSON_LD. It will inherit fields
   defined in parent classes.
+
+## [0.0.11] - 2018-05-28
+
+### Fixed
+
+- Added namespace::autoclean
 
 ## [0.0.10] - 2018-05-28
 
