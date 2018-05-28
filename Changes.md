@@ -6,6 +6,8 @@
 
 - Use JSON::MaybeXS instead of JSON
 
+- Added MooX::JSON_LD helper module
+
 ## [0.0.7]
 
 ### Added

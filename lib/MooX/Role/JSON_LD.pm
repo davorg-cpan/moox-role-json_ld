@@ -13,7 +13,7 @@ MooX::Role::JSON_LD - Easily provide JSON-LD mark-up for your objects.
     # define your attributes
     has first_name => ( ... );
     has last_name  => ( ... );
-    has birth date => ( ... );
+    has birth_date => ( ... );
 
     # Add two required methods
     sub json_ld_type { 'Person' };
