@@ -7,6 +7,7 @@ WriteMakefile(
     PREREQ_PM         => {
         Moose           => 0,
         Moo             => 0,
+        Sub::Quote      => 0, # no longer part of Moo
         Types::Standard => 0,
         JSON            => 0,
     },
@@ -29,4 +30,3 @@ WriteMakefile(
 
     },
 );
-
