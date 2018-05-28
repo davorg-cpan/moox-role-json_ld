@@ -9,7 +9,7 @@ WriteMakefile(
         Moo             => 0,
         Sub::Quote      => 0, # no longer part of Moo
         Types::Standard => 0,
-        JSON            => 0,
+        JSON::MaybeXS   => 0,
     },
     BUILD_REQUIRES    => {
         Test::More    => 0,
