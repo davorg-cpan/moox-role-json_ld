@@ -64,7 +64,7 @@ This adds the "headline" attribute to the C<json_ld_fields>.
     json_ld => 'alternateHeadline',
   );
 
-This adds the "alt)headline" attribute to the C<json_ld_fields>, with
+This adds the "alt_headline" attribute to the C<json_ld_fields>, with
 the label "alternateHeadline".
 
 =item C<json_ld_serializer>
