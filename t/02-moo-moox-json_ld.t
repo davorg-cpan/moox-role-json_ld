@@ -18,14 +18,14 @@ is($obj->boop, 'Bop!', 'boop is Bop!');
 
 is_deeply($obj->json_ld_data, {
   '@type' => 'Example',
-  '@context' => 'http://schema.org',
+  '@context' => 'http://schema.org/',
   bax => 'Bar',
   baz => 'Bar Foo',
   boop => 'Bop!',
 }, 'JSON data is correct');
 
 is($obj->json_ld, '{
-   "@context" : "http://schema.org",
+   "@context" : "http://schema.org/",
    "@type" : "Example",
    "bax" : "Bar",
    "baz" : "Bar Foo",
