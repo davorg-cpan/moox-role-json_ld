@@ -13,7 +13,7 @@ WriteMakefile(
     },
     BUILD_REQUIRES    => {
         Test::More    => 0,
-        namespace::autoclean => 1,
+        namespace::autoclean => 0,
     },
     ABSTRACT_FROM     => 'lib/MooX/Role/JSON_LD.pm',
     AUTHOR            => 'Dave Cross <dave@perlhacks.com>',
