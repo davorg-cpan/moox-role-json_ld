@@ -28,6 +28,9 @@ WriteMakefile(
                 web => 'https://github.com/davorg/moox-role-json_ld',
             },
         },
-
+        x_contributors => [
+            'Robert Rothenberg <rrwo@cpan.com>',
+            'Mohammad S Anwar <mohammad.anwar@yahoo.com>',
+        ],
     },
 );
