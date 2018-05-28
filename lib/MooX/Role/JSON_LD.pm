@@ -170,7 +170,7 @@ has context => (
 );
 
 sub _build_context {
-  return 'http://schema.org';
+  return 'http://schema.org/';
 }
 
 sub json_ld_data {
