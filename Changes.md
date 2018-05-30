@@ -1,11 +1,13 @@
 # Change Log
 
-## [Unreleased]
+## [0.0.12] - 2018-05-30
 
 ### Fixed
 
 - Fix handling of subclasses in MooX::JSON_LD. It will inherit fields
   defined in parent classes.
+
+- Fixed namespace::autoclean pre-req.
 
 ## [0.0.11] - 2018-05-28
 

@@ -110,7 +110,7 @@ use Moo::Role ();
 use List::Util qw/ any /;
 use Sub::Quote qw/ quote_sub /;
 
-our $VERSION = '0.0.11';
+our $VERSION = '0.0.12';
 
 my %Attributes;
 
