@@ -184,11 +184,4 @@ sub _process_has {
     ( $name, %opts );
 }
 
-sub _json_ld_fields {
-    my ( $class, $self ) = @_;
-    $Attributes{$class} // [];
-}
-
-1;
-
 1;

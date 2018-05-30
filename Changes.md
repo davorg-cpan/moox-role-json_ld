@@ -1,5 +1,9 @@
 # Change Log
 
+### Fixed
+
+- Removed Perl v5.10+ code that was not actually used.
+
 ## [0.0.12] - 2018-05-30
 
 ### Fixed
