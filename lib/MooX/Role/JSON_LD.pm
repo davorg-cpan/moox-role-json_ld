@@ -149,7 +149,7 @@ use JSON::MaybeXS;
 use Ref::Util qw/ is_plain_coderef is_plain_hashref is_ref is_blessed_ref /;
 use Types::Standard qw[ArrayRef HashRef InstanceOf Str];
 
-our $VERSION = '0.0.12';
+our $VERSION = '0.0.13';
 
 requires qw[json_ld_type json_ld_fields];
 
