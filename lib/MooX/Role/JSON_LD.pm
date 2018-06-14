@@ -38,7 +38,7 @@ MooX::Role::JSON_LD - Easily provide JSON-LD mark-up for your objects.
 
 =head1 DESCRIPTION
 
-This role allows you to easily add a method you your class that produces
+This role allows you to easily add a method to your class that produces
 JSON-LD representing an instance of your class.
 
 To do this, you need to do three things:
