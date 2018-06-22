@@ -1,5 +1,7 @@
 # Change Log
 
+- Changed context attribute to be lazy.
+
 ## [0.0.13] - 2018-06-02
 
 ### Fixed
