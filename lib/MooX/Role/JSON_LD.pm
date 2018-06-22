@@ -166,7 +166,7 @@ sub _build_json_ld_encoder {
 
 has context => (
   isa => Str | HashRef | ArrayRef,
-  is  => 'ro',
+  is  => 'lazy',
   builder => '_build_context',
 );
 
