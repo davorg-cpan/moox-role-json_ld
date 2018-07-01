@@ -171,17 +171,12 @@ sub _process_has {
         my $label  = delete $opts{json_ld};
         my $method = delete $opts{json_ld_serializer};
 
-        push @{ $Attributes{$class} },
-
-          {
-
-            $label eq "1" ? $name : $label => $method || $name
-
-          }
-
+        push @{ $Attributes{$class} }, {
+            $label eq "1" ? $name : $label => $method || $name;
+        }
     }
 
-    ( $name, %opts );
+    return ( $name, %opts );
 }
 
 1;
