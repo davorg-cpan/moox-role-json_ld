@@ -172,8 +172,8 @@ sub _process_has {
         my $method = delete $opts{json_ld_serializer};
 
         push @{ $Attributes{$class} }, {
-            $label eq "1" ? $name : $label => $method || $name;
-        }
+            $label eq "1" ? $name : $label => $method || $name
+        };
     }
 
     return ( $name, %opts );
