@@ -148,7 +148,7 @@ use Carp;
 use JSON::MaybeXS;
 use Types::Standard qw[ArrayRef HashRef InstanceOf Str is_CodeRef is_HashRef is_Ref is_Object];
 
-our $VERSION = '0.0.14';
+our $VERSION = '0.0.15';
 
 requires qw[json_ld_type json_ld_fields];
 
