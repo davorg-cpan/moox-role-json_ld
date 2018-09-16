@@ -1,5 +1,9 @@
 # Change Log
 
+### Tests
+
+- Explicitly test subclass parent.
+
 ## [0.0.14] - 2018-07-31
 
 ### Changed
