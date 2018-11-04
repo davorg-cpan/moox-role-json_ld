@@ -2,6 +2,8 @@
 
 ### Tests
 
+- Allow `_build_json_ld_encoder` method to be overridden.
+
 - Explicitly test subclass parent.
 
 ## [0.0.14] - 2018-07-31

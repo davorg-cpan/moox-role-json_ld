@@ -107,6 +107,7 @@ use warnings;
 use Moo       ();
 use Moo::Role ();
 
+use MRO::Compat;
 use Sub::Quote qw/ quote_sub /;
 
 our $VERSION = '0.0.15';
@@ -143,9 +144,9 @@ sub import {
         {
             '$code' => \sub {
                 my ($self) = @_;
-                my $fields = eval { $self->next::method };
+                my $fields = $self->maybe::next::method || [];
                 return [
-                    @{$fields || []},
+                    @{$fields},
                     @{$Attributes{$target} || []}
                 ];
             },
