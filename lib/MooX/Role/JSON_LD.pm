@@ -144,8 +144,10 @@ package MooX::Role::JSON_LD;
 use 5.6.0;
 
 use Moo::Role;
+
 use Carp;
 use JSON::MaybeXS;
+use MRO::Compat;
 use Types::Standard qw[ArrayRef HashRef InstanceOf Str is_CodeRef is_HashRef is_Ref is_Object];
 
 our $VERSION = '0.0.15';
@@ -154,14 +156,15 @@ requires qw[json_ld_type json_ld_fields];
 
 has json_ld_encoder => (
   isa => InstanceOf[ qw/ Cpanel::JSON::XS JSON JSON::PP JSON::XS /],
-  is  => 'ro',
-  lazy => 1,
+  is  => 'lazy',
   builder => '_build_json_ld_encoder',
 );
 
 sub _build_json_ld_encoder {
-  return JSON->new->canonical->utf8->space_after->indent->pretty;
-}
+    my ($self) = @_;
+    return $self->maybe::next::method ||
+        JSON->new->canonical->utf8->space_after->indent->pretty;
+};
 
 has context => (
   isa => Str | HashRef | ArrayRef,
