@@ -14,7 +14,7 @@ MooX::JSON_LD - Extend Moo to provide JSON-LD mark-up for your objects.
     has first_name => ( ... json_ld => 1 );
     has last_name  => ( ... json_ld => 1 );
 
-    has birth date => ( ...
+    has birth_date => ( ...
         json_ld => 'birthDate',
         json_ld_serializer => sub { shift->birth_date->ymd },
     );

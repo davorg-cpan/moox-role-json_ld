@@ -2,6 +2,8 @@
 
 ### Tests
 
+- Fix typo in SYNOPSIS.
+
 - Do not apply role from MooX::JSON_LD if the target is a role or it
   already has the expected methods.
 
