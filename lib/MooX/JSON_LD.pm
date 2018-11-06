@@ -111,7 +111,7 @@ use MRO::Compat;
 use List::Util qw/ all /;
 use Sub::Quote qw/ quote_sub /;
 
-our $VERSION = '0.0.15';
+our $VERSION = '0.0.17';
 
 my %Attributes;
 
