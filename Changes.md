@@ -1,5 +1,7 @@
 # Change Log
 
+- Fix minimum prereq for List::Util.
+
 ## [0.0.16] - 2018-11-06
 
 ### Fixed

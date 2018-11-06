@@ -5,6 +5,7 @@ WriteMakefile(
     VERSION_FROM      => 'lib/MooX/Role/JSON_LD.pm',
     MIN_PERL_VERSION  => '5.6.0',
     PREREQ_PM         => {
+        List::Util      => 1.33,
         Moose           => 0,
         Moo             => 0,
         Sub::Quote      => 0, # no longer part of Moo
