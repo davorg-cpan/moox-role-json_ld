@@ -31,6 +31,7 @@ WriteMakefile(
         x_contributors => [
             'Robert Rothenberg <rrwo@cpan.org>',
             'Mohammad S Anwar <mohammad.anwar@yahoo.com>',
+            'Anirvan Chatterjee <anirvan@cpan.org>',
         ],
     },
 );
