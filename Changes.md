@@ -1,6 +1,8 @@
 # Change Log
 
-### Tests
+## [0.0.16] - 2018-11-06
+
+### Fixed
 
 - Fix typo in SYNOPSIS.
 
