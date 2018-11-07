@@ -150,7 +150,7 @@ use JSON::MaybeXS;
 use MRO::Compat;
 use Types::Standard qw[ArrayRef HashRef InstanceOf Str is_CodeRef is_HashRef is_Ref is_Object];
 
-our $VERSION = '0.0.16';
+our $VERSION = '0.0.17';
 
 requires qw[json_ld_type json_ld_fields];
 
