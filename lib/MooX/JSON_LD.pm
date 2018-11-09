@@ -126,7 +126,7 @@ sub import {
     my $installer =
       $target->isa("Moo::Object")
       ? \&Moo::_install_tracked
-      : \&Moo::Role::install_tracked;
+      : \&Moo::Role::_install_tracked;
 
     if ( my $has = $target->can('has') ) {
         my $new_has = sub {
