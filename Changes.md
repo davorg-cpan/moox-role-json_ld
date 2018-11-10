@@ -1,5 +1,7 @@
 # Change Log
 
+- Fix installation of MooX::JSON_LD methods into Moo roles.
+
 - Fix inconsistent version between modules.
 
 - Fix minimum prereq for List::Util.
