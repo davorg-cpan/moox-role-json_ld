@@ -29,7 +29,7 @@ WriteMakefile(
                            web => 'https://github.com/davorg/moox-role-json_ld',
                           },
                       bugtracker => {
-                                     "web" => "https://github.com/perl6/doc/issues/2584"
+                                     "web" => "https://github.com/davorg/moox-role-json_ld/issues"
                                     }
         },
         x_contributors => [
