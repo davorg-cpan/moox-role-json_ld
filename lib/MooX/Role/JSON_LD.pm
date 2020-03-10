@@ -181,9 +181,11 @@ sub _resolve_nested {
     my ($val) = @_;
 
     if (is_ArrayRef($val)) {
-      return [ map { is_Object($_) && $_->can('json_ld_data')
+      return [
+	map { is_Object($_) && $_->can('json_ld_data')
           ? $_->json_ld_data
-          : $_; } @$val ];
+          : $_; } @$val
+        ];
     }
 
     is_Object($val) && $val->can('json_ld_data')
