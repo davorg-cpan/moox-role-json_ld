@@ -180,9 +180,6 @@ sub _build_context {
 sub _resolve_nested {
     my ($val) = @_;
 
-use Data::Dumper;
-warn "Resolve nested object for: ", Dumper($val), "\n";
-
     if (is_ArrayRef($val)) {
       return [
 	      map { is_Object($_) && $_->can('json_ld_data')
@@ -206,33 +203,41 @@ sub json_ld_data {
 
   foreach my $field (@{$self->json_ld_fields}) {
 
-      if (is_Ref($field)) {
+    if (is_Ref($field)) {
 
-          if (is_HashRef($field)) {
+      if (is_HashRef($field)) {
 
-              while (my ($key, $val) = each %{$field}) {
+        my @keys = keys %$field;
+        my @vals = values %$field;
 
-                  if (defined (my $res = is_CodeRef($val)
-                               ? $val->($self)
-                               : $self->$val)) {
-                      $data->{$key} = _resolve_nested($res);
-                  }
+        # Originally, this code used 'each', but there seemed
+        # to be some circumstances where the internet iterator
+        # got confused - particularly when an object contained
+        # a sub-object of the same type.
+        for my $x (0 .. $#keys) {
+          my $key = $keys[$x];
+          my $val = $vals[$x];
 
-              }
+          if (defined (my $res = is_CodeRef($val)
+                       ? $val->($self)
+                       : $self->$val)) {
+            $data->{$key} = _resolve_nested($res);
           }
-          else {
-              carp "Weird JSON-LD reference: " . ref $field;
-              next;
-          }
-
+        }
       }
       else {
-
-          if (defined (my $res = $self->$field)) {
-              $data->{$field} = _resolve_nested($res);
-          }
-
+        carp "Weird JSON-LD reference: " . ref $field;
+        next;
       }
+
+    }
+    else {
+
+      if (defined (my $res = $self->$field)) {
+        $data->{$field} = _resolve_nested($res);
+      }
+
+    }
 
   }
 

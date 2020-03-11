@@ -32,8 +32,9 @@ my $child = LD::Person->new(
   parent => $parent,
 );
 
-diag Dumper $child->json_ld_data;
+ok(my $ld = $child->json_ld_data, 'json_ld_data returns');
+is($ld->{parent}{name}, 'A Parent', 'Got the correct parent');
 
-ok(1);
+diag Dumper $child->json_ld_data;
 
 done_testing;
