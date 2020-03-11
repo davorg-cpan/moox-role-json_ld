@@ -180,9 +180,12 @@ sub _build_context {
 sub _resolve_nested {
     my ($val) = @_;
 
+use Data::Dumper;
+warn "Resolve nested object for: ", Dumper($val), "\n";
+
     if (is_ArrayRef($val)) {
       return [
-	map { is_Object($_) && $_->can('json_ld_data')
+	      map { is_Object($_) && $_->can('json_ld_data')
           ? $_->json_ld_data
           : $_; } @$val
         ];
@@ -201,13 +204,13 @@ sub json_ld_data {
     '@type'    => $self->json_ld_type,
   };
 
-  foreach (@{$self->json_ld_fields}) {
+  foreach my $field (@{$self->json_ld_fields}) {
 
-      if (is_Ref($_)) {
+      if (is_Ref($field)) {
 
-          if (is_HashRef($_)) {
+          if (is_HashRef($field)) {
 
-              while (my ($key, $val) = each %{$_}) {
+              while (my ($key, $val) = each %{$field}) {
 
                   if (defined (my $res = is_CodeRef($val)
                                ? $val->($self)
@@ -218,15 +221,15 @@ sub json_ld_data {
               }
           }
           else {
-              carp "Weird JSON-LD reference: " . ref $_;
+              carp "Weird JSON-LD reference: " . ref $field;
               next;
           }
 
       }
       else {
 
-          if (defined (my $res = $self->$_)) {
-              $data->{$_} = _resolve_nested($res);
+          if (defined (my $res = $self->$field)) {
+              $data->{$field} = _resolve_nested($res);
           }
 
       }
