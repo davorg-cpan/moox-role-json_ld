@@ -11,9 +11,18 @@ MooX::Role::JSON_LD - Easily provide JSON-LD mark-up for your objects.
     with 'MooX::Role::JSON_LD';
 
     # define your attributes
-    has first_name => ( ... );
-    has last_name  => ( ... );
-    has birth_date => ( ... );
+    has first_name => (
+      is => 'ro',
+      # Various other properties
+    );
+    has last_name  => (
+      is => 'ro',
+      # Various other properties
+    );
+    has birth_date => (
+      is => 'ro',
+      # Various other properties
+    );
 
     # Add two required methods
     sub json_ld_type { 'Person' };

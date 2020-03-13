@@ -11,12 +11,23 @@ MooX::JSON_LD - Extend Moo to provide JSON-LD mark-up for your objects.
 
     use MooX::JSON_LD 'Person';
 
-    has first_name => ( is => 'rw', json_ld => 1 );
-    has last_name  => ( is => 'rw', json_ld => 1 );
+    has first_name => (
+      is => 'ro',
+      # various other properties...
+      json_ld => 1,
+    );
 
-    has birth_date => ( is => 'rw',
-        json_ld => 'birthDate',
-        json_ld_serializer => sub { shift->birth_date },
+    has last_name  => (
+      is => 'ro',
+      # various other properties...
+      json_ld => 1,
+    );
+
+    has birth_date => (
+      is => 'ro',
+      # various other properties...
+      json_ld => 'birthDate',
+      json_ld_serializer => sub { shift->birth_date },
     );
 
     # Then, in a program somewhere...
