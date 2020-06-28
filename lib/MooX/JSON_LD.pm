@@ -1,3 +1,5 @@
+use compat::perl7;
+
 =head1 NAME
 
 MooX::JSON_LD - Extend Moo to provide JSON-LD mark-up for your objects.

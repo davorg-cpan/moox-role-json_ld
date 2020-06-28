@@ -1,3 +1,5 @@
+use compat::perl7;
+
 =head1 NAME
 
 MooX::Role::JSON_LD - Easily provide JSON-LD mark-up for your objects.
