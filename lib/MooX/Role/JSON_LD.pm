@@ -5,7 +5,7 @@ MooX::Role::JSON_LD - Easily provide JSON-LD mark-up for your objects.
 =head1 SYNOPSIS
 
     # Your Moo (or Moose) Class
-    package::My::Moo::Class
+    package My::Moo::Class;
 
     use Moo;
     with 'MooX::Role::JSON_LD';
