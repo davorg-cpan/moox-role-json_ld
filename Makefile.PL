@@ -25,14 +25,14 @@ WriteMakefile(
     META_MERGE        => {
         'meta-spec' => { version => 2 },
         resources => {
-                      repository => {
-                           type => 'git',
-                           url => 'git://github.com/davorg/moox-role-json_ld.git',
-                           web => 'https://github.com/davorg/moox-role-json_ld',
-                          },
-                      bugtracker => {
-                                     "web" => "https://github.com/davorg/moox-role-json_ld/issues"
-                                    }
+            repository => {
+                type => 'git',
+                url => 'git://github.com/davorg-cpan/moox-role-json_ld.git',
+                web => 'https://github.com/davorg-cpan/moox-role-json_ld',
+            },
+            bugtracker => {
+                "web" => "https://github.com/davorg-cpan/moox-role-json_ld/issues"
+            }
         },
         x_contributors => [
             'Robert Rothenberg <rrwo@cpan.org>',
