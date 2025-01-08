@@ -140,6 +140,15 @@ That configuration will give us the following output:
     "birthDate" : "1974-01-08",
     "name" : "David Bowie",
 
+To summarise, the C<json_ld_fields> subroutine should return an array
+reference. Each element of the array is either a string or a hash reference.
+If it is a string, that string is used as both the key in the JSON-LD and
+the method to call on an object to get the value. If the array contains
+a hash reference, then the hash key is used in the JSON-LD and the hash value
+is either a string, which is the name of the method to call on an object to
+get the value, or a code reference which is called (passing in the object)
+and which is expected to return the value to use in the JSON-LD.
+
 =head2 Other contexts
 
 By default, this role uses the URL L<http://schema.org>, but you can change
