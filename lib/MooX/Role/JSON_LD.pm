@@ -264,7 +264,39 @@ sub json_ld {
   return $self->json_ld_encoder->encode($self->json_ld_data);
 }
 
+sub json_ld_wrapped {
+  my $self = shift;
+
+  return qq[<script type="application/ld+json">\n]
+    . $self->json_ld . "\n"
+    . qq[</script>\n];
+}
+
 1;
+
+=head1 METHODS
+
+This role adds three methods to your class. You can call these methods to
+output the object's JSON-LD in various formats.
+
+=over 4
+
+=item json_ld_data
+
+Returns a Perl data structure containing the data that will be encoded into
+JSON.
+
+=item json_ld
+
+Returns the data from C<json_ld_data> encoded into JSON.
+
+=item json_ld_wrapped
+
+Returns the JSON string from C<json_ld> wrapped in the
+C<< <script> .. </script> >> element you will usually need in order to
+embed the JSON in an HTML document.
+
+=back
 
 =head1 AUTHOR
 
