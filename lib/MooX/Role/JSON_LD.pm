@@ -210,7 +210,7 @@ sub process_hash {
   my @vals = values %$field;
 
   # Originally, this code used 'each', but there seemed
-  # to be some circumstances where the internet iterator
+  # to be some circumstances where the internal iterator
   # got confused - particularly when an object contained
   # a sub-object of the same type.
   for my $x (0 .. $#keys) {
