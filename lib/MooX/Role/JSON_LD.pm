@@ -130,7 +130,7 @@ anything you want. We can use that to get the full name of our person.
 
     sub json_ld_fields {
         [
-          { birthDate => 'birthDate'},
+          { birthDate => 'birth_date'},
           { name => sub{ $_[0]-> first_name . ' ' . $_[0]->last_name} },
         ]
       }
