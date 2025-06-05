@@ -151,7 +151,7 @@ and which is expected to return the value to use in the JSON-LD.
 
 =head2 Other contexts
 
-By default, this role uses the URL L<http://schema.org>, but you can change
+By default, this role uses the URL L<https://schema.org>, but you can change
 this. This role adds an attribute (called C<context>) which can be used to
 change the context.
 
@@ -192,7 +192,7 @@ has context => (
 );
 
 sub _build_context {
-  return 'http://schema.org/';
+  return 'https://schema.org/';
 }
 
 sub _resolve_nested {
